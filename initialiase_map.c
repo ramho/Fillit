@@ -1,20 +1,27 @@
-int	initialise_map(t_list head, char **map)
-{
-	int x;
-	int y;
-	map[x][y];
+#include "libft/libft.h"
+#include "read.h"
+#include <stdio.h>//
 
-	x = 0;
-	y = 0;
-	
-	while ( x < head.count)
+int		main(int ac, char **av)
+{
+	int count;
+	int x = 0;
+	int y = 0;
+	int map[x][y];
+	double size;
+
+	count = 10;
+	size = ft_sqrt(count * 4);
+	printf("%f\n", size);
+	while (x < size)
 	{
-		while ( y < head.count)
+		while ( y < size)
 		{
 			ft_putchar('.');
 			y++;
 		}
-		y = 0;
+		ft_putchar('\n');
+		y  = 0;
 		x++;
 	}
 	return (0);

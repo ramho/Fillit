@@ -6,13 +6,14 @@
 /*   By: rhoorntj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 14:29:59 by rhoorntj          #+#    #+#             */
-/*   Updated: 2019/09/23 14:48:20 by rhoorntj         ###   ########.fr       */
+/*   Updated: 2019/09/23 17:31:20 by rhoorntj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <math.h>
 
-double	ft_sqrt(int x)
+double	ft_sqrt(double x)
 {
 	double temp;
 	double sqrt;
