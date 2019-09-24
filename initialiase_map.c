@@ -2,27 +2,31 @@
 #include "read.h"
 #include <stdio.h>//
 
-int		main(int ac, char **av)
+char		**initialise_map(t_liste *head)
 {
 	int count;
 	int x = 0;
 	int y = 0;
-	int map[x][y];
-	double size;
+	double size1;
+	int size;
+	char **map;
 
-	count = 10;
+	size = (int)size1;
+	count = 1;
 	size = ft_sqrt(count * 4);
-	printf("%f\n", size);
+	if (!(map = (char**)ft_memalloc(sizeof(*map) * size + 1)))
+			return (NULL);
 	while (x < size)
 	{
-		while ( y < size)
+		if(!(map[x] = ft_strnew(size)))
+			return (NULL);
+		while (y < size)
 		{
-			ft_putchar('.');
+			map[x][y] = '.';
 			y++;
 		}
-		ft_putchar('\n');
 		y  = 0;
 		x++;
 	}
-	return (0);
+	return (map);
 }
